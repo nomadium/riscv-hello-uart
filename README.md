@@ -1,6 +1,8 @@
 # riscv-hello-uart
 Minimal bare-metal RISC-V assembly code with UART output for execution in QEMU
 
+For a more realistic but still minimal example, take a look at: https://github.com/nomadium/riscv-real-world-hello-uart
+
 ## Requirements
 ### Tools:
 - riscv64-unknown-elf-gcc
@@ -8,7 +10,7 @@ Minimal bare-metal RISC-V assembly code with UART output for execution in QEMU
 - riscv64-unknown-elf-objcopy
 
 ### Building:
-Make
+make
 
 ### Execution:
 qemu-system-riscv64
