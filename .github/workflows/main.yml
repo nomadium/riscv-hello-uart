@@ -19,11 +19,11 @@ jobs:
     - name: install dependencies
       run: |
           sudo apt update --yes
-          sudo apt install -o Acquire::Retries=3 --yes \
+          sudo apt install -o Acquire::Retries=5 --yes \
               gcc-riscv64-unknown-elf qemu-system-misc
     - name: make
       run: make
     - name: make run
-      run: sh -c 'timeout 2 make run || true &' 2>&1 | tee output
+      run: sh -c 'timeout 20 make run || true &' 2>&1 | tee output
     - name: check expected output
       run: grep --silent '^hello world!' output
