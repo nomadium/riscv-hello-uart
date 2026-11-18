@@ -20,7 +20,7 @@ jobs:
       run: |
           sudo apt update --yes
           sudo apt install -o Acquire::Retries=5 --yes \
-              gcc-riscv64-unknown-elf qemu-system-misc
+              gcc-riscv64-unknown-elf qemu-system-riscv
     - name: make
       run: make
     - name: make run
